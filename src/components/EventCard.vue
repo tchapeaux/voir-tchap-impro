@@ -5,9 +5,11 @@
       <div class="type">{{ event.type }}</div>
       <a
         class="external-link"
-        :class="{ 'disabled-link': !event.url }"
+        :class="{ 'disabled-link': !hasUrl }"
         :href="event.url"
         @click="handleClick"
+        :title="hasUrl ? `Plus d'infos pour ${event.name}` : undefined"
+        :aria-hidden="!hasUrl"
         ><IconLink
       /></a>
     </div>
@@ -37,6 +39,8 @@ const TYPE_CLASSES = {
 
 // @ts-ignore
 const typeClass = computed(() => TYPE_CLASSES[props.event.type] || undefined)
+
+const hasUrl = computed(() => !!props.event.url)
 
 function handleClick() {
   if (!props.event.url) {

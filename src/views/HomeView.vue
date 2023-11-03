@@ -23,7 +23,9 @@ function eventsByYear(year: string) {
     <template v-for="year in eventsYears" :key="year">
       <h2>{{ year }}</h2>
       <ul class="events-list">
-        <EventCard v-for="(event, eventIdx) in eventsByYear(year)" :key="eventIdx" :event="event" />
+        <li v-for="(event, eventIdx) in eventsByYear(year)" :key="eventIdx">
+          <EventCard :event="event" />
+        </li>
       </ul>
     </template>
   </template>
