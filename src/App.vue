@@ -11,7 +11,7 @@ import { RouterView } from 'vue-router'
     <RouterView />
   </main>
 
-  <footer>Voir le code source</footer>
+  <footer><a href="https://github.com/tchapeaux/voir-tchap-impro">Voir le code source</a></footer>
 </template>
 
 <style scoped>
