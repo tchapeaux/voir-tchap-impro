@@ -5,7 +5,10 @@ import dayjs from 'dayjs'
 import EventCard from '@/components/EventCard.vue'
 import EVENTS from '../data/thomas-events.json'
 
-const futureEvents = computed(() => EVENTS.items.filter((e) => dayjs(e.date) > dayjs()))
+const futureEvents = computed(() =>
+  // Substract a small value to keep recent events for a few days and avoid timezone issues
+  EVENTS.items.filter((e) => dayjs(e.date) > dayjs().subtract(1, 'week'))
+)
 
 const eventsYears = computed(() => {
   const years = futureEvents.value.map((e) => dayjs(e.date).format('YYYY'))
