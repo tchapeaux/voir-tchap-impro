@@ -35,6 +35,7 @@ const TYPE_CLASSES = {
   Arbitrage: 'type--arbitrage'
 }
 
+// @ts-ignore
 const typeClass = computed(() => TYPE_CLASSES[props.event.type] || undefined)
 
 function handleClick() {
