@@ -7,7 +7,9 @@ import EVENTS from '../data/thomas-events.json'
 
 const futureEvents = computed(() =>
   // Substract a small value to keep recent events for a few days and avoid timezone issues
-  EVENTS.items.filter((e) => dayjs(e.date) > dayjs().subtract(1, 'week'))
+  EVENTS.items
+    .filter((e) => dayjs(e.date) > dayjs().subtract(1, 'week'))
+    .sort((e1, e2) => (dayjs(e1.date).isBefore(dayjs(e2.date)) ? -1 : 1))
 )
 
 const eventsYears = computed(() => {
