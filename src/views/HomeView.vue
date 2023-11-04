@@ -47,13 +47,13 @@ function eventsByYear(year: string) {
   gap: 16px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 720px) {
   .events-list {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1040px) {
   .events-list {
     grid-template-columns: 1fr 1fr 1fr;
   }

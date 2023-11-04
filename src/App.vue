@@ -4,7 +4,7 @@ import { RouterView } from 'vue-router'
 
 <template>
   <header>
-    <h1>Où voir <span class="hero">Thomas Chapeaux</span> faire de l'impro ?</h1>
+    <h1>Où voir <span class="hero">Thomas&nbsp;Chapeaux</span> faire de l'impro&nbsp;?</h1>
   </header>
 
   <main>

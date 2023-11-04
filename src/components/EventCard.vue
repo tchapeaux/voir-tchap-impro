@@ -57,6 +57,8 @@ function handleClick() {
   background-color: var(--card-color);
   box-shadow: 0px 0px 5px var(--card-color);
 
+  width: 315px;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
