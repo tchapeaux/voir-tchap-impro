@@ -10,6 +10,7 @@
         @click="handleClick"
         :title="hasUrl ? `Plus d'infos pour ${event.name}` : undefined"
         :aria-hidden="!hasUrl"
+        target="_blank"
         ><IconLink
       /></a>
     </div>
