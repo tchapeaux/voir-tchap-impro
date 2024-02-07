@@ -4,7 +4,7 @@ import dayjs from 'dayjs'
 
 import EventCard from '@/components/EventCard.vue'
 import EVENTS from '../data/thomas-events.json'
-import { Event } from '@/types/events'
+import { type Event } from '@/types/events'
 
 function sortEventByDateAsc(e1: Event, e2: Event) {
   return dayjs(e1.date).isBefore(dayjs(e2.date)) ? -1 : 1
