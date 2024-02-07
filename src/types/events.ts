@@ -1,7 +1,7 @@
 export interface Event {
-  date: Date
+  date: string
   name: string
   place: string
   type: string
-  url: string
+  url?: string
 }
