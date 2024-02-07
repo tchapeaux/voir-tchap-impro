@@ -5,11 +5,21 @@ import dayjs from 'dayjs'
 import EventCard from '@/components/EventCard.vue'
 import EVENTS from '../data/thomas-events.json'
 
+function sortEventByDateAsc(e1, e2) {
+  return dayjs(e1.date).isBefore(dayjs(e2.date)) ? -1 : 1
+}
+
+function sortEventByDateDesc(e1, e2) {
+  return dayjs(e1.date).isBefore(dayjs(e2.date)) ? 1 : -1
+}
+
 const futureEvents = computed(() =>
   // Substract a small value to keep recent events for a few days and avoid timezone issues
-  EVENTS.items
-    .filter((e) => dayjs(e.date) > dayjs().subtract(1, 'week'))
-    .sort((e1, e2) => (dayjs(e1.date).isBefore(dayjs(e2.date)) ? -1 : 1))
+  EVENTS.items.filter((e) => dayjs(e.date) > dayjs().subtract(1, 'week')).sort(sortEventByDateAsc)
+)
+
+const pasEvents = computed(() =>
+  EVENTS.items.filter((e) => !futureEvents.value.includes(e)).sort(sortEventByDateDesc)
 )
 
 const eventsYears = computed(() => {
@@ -33,6 +43,13 @@ function eventsByYear(year: string) {
         </li>
       </ul>
     </template>
+
+    <h2>Déjà passés</h2>
+    <ul class="events-list">
+      <li v-for="(event, eventIdx) in pasEvents" :key="eventIdx">
+        <EventCard :event="event" />
+      </li>
+    </ul>
   </template>
 </template>
 
