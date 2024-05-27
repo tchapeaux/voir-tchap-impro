@@ -84,9 +84,16 @@
     },
     {
       "date": "2024/05/24",
-      "name": "Spectacle surprise",
+      "name": "Les Cheddars de l'Impro",
       "place": "La Plume Persée",
       "type": "Croutounz"
+    },
+    {
+      "date": "2024/06/01",
+      "name": "Demi-finale FBIA",
+      "place": "Salle Jules Bastin, Waterloo",
+      "type": "Championnat",
+      "url": "https://shop.utick.net/?pos=FBIA&module=ACTIVITYSERIEDETAILS&s=85131252-CA2E-C0B0-FF7E-0D11BFFF86DF"
     }
   ]
 }
