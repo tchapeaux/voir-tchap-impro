@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import dayjs from 'dayjs'
 
 import EventCard from '@/components/EventCard.vue'
 import EVENTS from '../data/thomas-events.json'
 import { type Event } from '@/types/events'
+
+const pastClosed = ref(true)
 
 function sortEventByDateAsc(e1: Event, e2: Event) {
   return dayjs(e1.date).isBefore(dayjs(e2.date)) ? -1 : 1
@@ -46,12 +48,17 @@ function eventsByYear(year: string) {
     </template>
   </template>
 
-  <h2>Déjà passés</h2>
-  <ul class="events-list">
-    <li v-for="(event, eventIdx) in pastEvents" :key="eventIdx">
-      <EventCard :event="event" />
-    </li>
-  </ul>
+  <button class="showPast" v-if="pastClosed" @click="() => (pastClosed = !pastClosed)">
+    Voir les événements passés
+  </button>
+  <template v-else>
+    <h2>Déjà passés</h2>
+    <ul v-if="!pastClosed" class="events-list">
+      <li v-for="(event, eventIdx) in pastEvents" :key="eventIdx">
+        <EventCard :event="event" />
+      </li>
+    </ul>
+  </template>
 </template>
 
 <style scoped>
@@ -63,6 +70,25 @@ function eventsByYear(year: string) {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
+}
+
+.showPast {
+  margin-top: 3rem;
+
+  width: 100%;
+  text-align: center;
+
+  font-size: 0.9rem;
+  color: #666;
+
+  background: none;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    color: teal;
+    text-decoration: underline;
+  }
 }
 
 @media screen and (min-width: 720px) {
