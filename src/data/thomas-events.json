@@ -101,6 +101,55 @@
       "place": "Salle Jules Bastin, Waterloo",
       "type": "Arbitrage",
       "url": "https://shop.utick.net/?module=ACTIVITYSERIEDETAILS&pos=FBIA&s=64452563-F817-E7DF-02A4-2B34A2B7DC92"
+    },
+    {
+      "date": "2024/09/21",
+      "name": "Match Croutounz-Poneys",
+      "place": "Magic Land Theatre, Bruxelles",
+      "type": "Championnat",
+      "url": "https://shop.utick.net/?pos=FBIA&module=ACTIVITYSERIEDETAILS&s=800EBC39-AB3B-9658-AE8D-2E3B9FE970EA"
+    },
+    {
+      "date": "2024/09/27",
+      "name": "Match sans équipe",
+      "place": "La Plume Persée, Ixelles",
+      "type": "Arbitrage",
+      "url": ""
+    },
+    {
+      "date": "2024/09/28",
+      "name": "Match Sales Gosses - Flammes",
+      "place": "Magic Land Theatre, Bruxelles",
+      "type": "Arbitrage",
+      "url": "https://shop.utick.net/?module=ACTIVITYSERIEDETAILS&pos=FBIA&s=9C328E55-D0CA-B198-39F7-96DD9B5E078D"
+    },
+    {
+      "date": "2024/10/05",
+      "name": "Match Croutounz-Oh My God!",
+      "place": "Roseraie, Uccle",
+      "type": "Championnat",
+      "url": "https://shop.utick.net/?module=ACTIVITYSERIEDETAILS&pos=FBIA&s=1049F17F-B289-ED7E-2842-68BE13E1A658"
+    },
+    {
+      "date": "2024/11/27",
+      "name": "Match Croutounz-Yétis Garous",
+      "place": "La Mule, Schaerbeek",
+      "type": "Invitation",
+      "url": ""
+    },
+    {
+      "date": "2025/04/12",
+      "name": "Match Croutounz-Flammes en Rose",
+      "place": "Mercelis, Ixelles",
+      "type": "Championnat",
+      "url": "https://shop.utick.net/?module=ACTIVITYSERIEDETAILS&pos=FBIA&s=1CC7C04E-5FFA-9BAC-E74F-4BFFFB1CA250"
+    },
+    {
+      "date": "2025/05/10",
+      "name": "Les Cheddars de l'Impro",
+      "place": "Salle Malibran, Ixelles",
+      "type": "Croutounz",
+      "url": ""
     }
   ]
 }

@@ -19,7 +19,7 @@ const futureEvents = computed(() =>
   EVENTS.items.filter((e) => dayjs(e.date) > dayjs().subtract(1, 'week')).sort(sortEventByDateAsc)
 )
 
-const pasEvents = computed(() =>
+const pastEvents = computed(() =>
   EVENTS.items.filter((e) => !futureEvents.value.includes(e)).sort(sortEventByDateDesc)
 )
 
@@ -34,7 +34,7 @@ function eventsByYear(year: string) {
 </script>
 
 <template>
-  <template v-if="futureEvents.length === 0">Rien à afficher.</template>
+  <div v-if="futureEvents.length === 0" style="text-align: center">Pas de spectacles à venir.</div>
   <template v-else>
     <template v-for="year in eventsYears" :key="year">
       <h2>{{ year }}</h2>
@@ -44,14 +44,14 @@ function eventsByYear(year: string) {
         </li>
       </ul>
     </template>
-
-    <h2>Déjà passés</h2>
-    <ul class="events-list">
-      <li v-for="(event, eventIdx) in pasEvents" :key="eventIdx">
-        <EventCard :event="event" />
-      </li>
-    </ul>
   </template>
+
+  <h2>Déjà passés</h2>
+  <ul class="events-list">
+    <li v-for="(event, eventIdx) in pastEvents" :key="eventIdx">
+      <EventCard :event="event" />
+    </li>
+  </ul>
 </template>
 
 <style scoped>
