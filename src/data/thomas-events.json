@@ -1,5 +1,5 @@
 {
-  "title": "Dates d'impro de Thomas en 2023-2024",
+  "title": "Dates d'impro de Thomas",
   "items": [
     {
       "date": "2023/11/08",
@@ -138,11 +138,25 @@
       "url": ""
     },
     {
+      "date": "2025/01/11",
+      "name": "Match Poneys de Bains-Oh My God!",
+      "place": "Mercelis, Ixelles",
+      "type": "Arbitrage",
+      "url": "https://shop.utick.net/?pos=FBIA&module=ACTIVITYSERIEDETAILS&s=C237A96B-0D93-5177-804B-30CC02AED7A7"
+    },
+    {
       "date": "2025/04/12",
       "name": "Match Croutounz-Flammes en Rose",
       "place": "Mercelis, Ixelles",
       "type": "Championnat",
       "url": "https://shop.utick.net/?module=ACTIVITYSERIEDETAILS&pos=FBIA&s=1CC7C04E-5FFA-9BAC-E74F-4BFFFB1CA250"
+    },
+    {
+      "date": "2025/04/19",
+      "name": "Match Poussins Masqués-Sales Gosses",
+      "place": "Mercelis, Ixelles",
+      "type": "Arbitrage",
+      "url": "https://shop.utick.net/?pos=FBIA&module=ACTIVITYSERIEDETAILS&s=8E8CE73A-157B-3690-4D52-DEB6D54CC190"
     },
     {
       "date": "2025/05/10",

@@ -1,7 +1,6 @@
 <template>
   <div class="card" :class="typeClass">
     <div class="card-header">
-      <div class="date">{{ dayjs(event.date).format('DD MMM YY') }}</div>
       <div class="type">{{ event.type }}</div>
       <a
         class="external-link"
@@ -15,6 +14,10 @@
       /></a>
     </div>
     <div class="name">{{ event.name }}</div>
+    <div class="date">
+      <IconDate />
+      {{ dayjs(event.date).format('DD MMMM YYYY') }}
+    </div>
     <div class="place">
       <IconPin />
       {{ event.place }}
@@ -28,6 +31,7 @@ import { computed } from 'vue'
 
 import IconPin from './icons/IconPin.vue'
 import IconLink from './icons/IconLink.vue'
+import IconDate from './icons/IconDate.vue'
 
 const props = defineProps({ event: { type: Object, required: true } })
 
@@ -52,7 +56,7 @@ function handleClick() {
 
 <style scoped>
 .card {
-  padding: 16px;
+  padding: 8px;
   color: black;
   background-color: var(--card-color);
   box-shadow: 0px 0px 5px var(--card-color);
@@ -62,6 +66,7 @@ function handleClick() {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 4px;
 }
 
 .card-header {
@@ -69,31 +74,37 @@ function handleClick() {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 4px;
 }
 
 .disabled-link {
   opacity: 0.3;
 }
 
-.date {
-  font-size: 1.3rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
 .type {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 300;
   padding: 0 8px;
   border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--card-color);
 }
 
+.name {
+  line-height: 1.25;
+}
+
+.date,
 .place {
   font-size: 0.9rem;
   display: flex;
   align-items: center;
   gap: 8px;
+  line-height: 1;
+
+  svg {
+    width: 15px;
+    opacity: 0.8;
+  }
 }
 
 .type--championnat {
