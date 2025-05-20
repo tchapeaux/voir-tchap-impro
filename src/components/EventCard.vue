@@ -56,17 +56,20 @@ function handleClick() {
 
 <style scoped>
 .card {
-  padding: 8px;
-  color: black;
+  padding: 12px;
+  padding-top: 8px;
+  color: #222;
   background-color: var(--card-color);
   box-shadow: 0px 0px 5px var(--card-color);
+
+  border-radius: 12px;
 
   width: 315px;
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
+  gap: 8px;
 }
 
 .card-header {
