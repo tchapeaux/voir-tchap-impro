@@ -185,6 +185,20 @@
       "place": "Salle Malibran, Ixelles",
       "type": "Croutounz",
       "url": ""
+    },
+    {
+      "date": "2025/05/24",
+      "name": "1e demi-finale FBIA",
+      "place": "Salle Jules Bastin, Waterloo",
+      "type": "Arbitrage",
+      "url": "https://shop.utick.net/?pos=FBIA&module=ACTIVITYSERIEDETAILS&s=77E815A9-3DD8-B1FF-3A18-7F82D384D4FC"
+    },
+    {
+      "date": "2025/06/07",
+      "name": "2e demi-finale FBIA",
+      "place": "Salle Jules Bastin, Waterloo",
+      "type": "Championnat",
+      "url": "https://shop.utick.net/?pos=FBIA&module=ACTIVITYSERIEDETAILS&s=6C670845-EBE2-0329-9588-40780DD81461"
     }
   ]
 }
