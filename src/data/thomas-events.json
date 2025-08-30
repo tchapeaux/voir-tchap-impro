@@ -213,6 +213,43 @@
       "place": "Petit Chapeau Rond Rouge, Etterbeek",
       "type": "Invitation",
       "url": "https://www.facebook.com/share/1JZAYHJBpE/"
+    },
+    {
+      "date": "2025/09/13",
+      "name": "Match Croutounz - Motus",
+      "place": "Théâtre le Fou Rire, Ixelles",
+      "type": "Championnat",
+      "url": "https://shop.utick.net/?module=ACTIVITYSERIEDETAILS&pos=FBIA&s=00B8907D-AB68-0BFE-B012-0FD0307E74FB"
+    },
+    {
+      "date": "2025/09/17",
+      "name": "Raconte-moi tes salades",
+      "place": "Coin Culture ULB - Ixelles",
+      "type": "Croutounz"
+    },
+    {
+      "date": "2025/09/27",
+      "name": "Zinns - Poneys de bain",
+      "place": "Institut St Boniface, Ixelles",
+      "type": "Arbitrage"
+    },
+    {
+      "date": "2025/10/11",
+      "name": "Poussins Masqués - Flammes en Rose",
+      "place": "Institut St Boniface, Ixelles",
+      "type": "Arbitrage"
+    },
+    {
+      "date": "2025/11/12",
+      "name": "Raconte-moi tes salades",
+      "place": "Coin Culture ULB - Ixelles",
+      "type": "Croutounz"
+    },
+    {
+      "date": "2025/12/03",
+      "name": "50 minutes de cuisson",
+      "place": "La Fleur en Papier Doré, Bruxelles",
+      "type": "Croutounz"
     }
   ]
 }
