@@ -208,13 +208,6 @@
       "url": "https://shop.utick.net/?pos=FBIA&module=ACTIVITYSERIEDETAILS&s=6C670845-EBE2-0329-9588-40780DD81461"
     },
     {
-      "date": "2025/11/06",
-      "name": "Le JTPT",
-      "place": "Petit Chapeau Rond Rouge, Etterbeek",
-      "type": "Invitation",
-      "url": "https://www.facebook.com/share/1JZAYHJBpE/"
-    },
-    {
       "date": "2025/09/13",
       "name": "Match Croutounz - Motus",
       "place": "Théâtre le Fou Rire, Ixelles",
@@ -238,6 +231,13 @@
       "name": "Poussins Masqués - Flammes en Rose",
       "place": "Institut St Boniface, Ixelles",
       "type": "Arbitrage"
+    },
+    {
+      "date": "2025/11/06",
+      "name": "Le JTPT",
+      "place": "Petit Chapeau Rond Rouge, Etterbeek",
+      "type": "Invitation",
+      "url": "https://www.facebook.com/share/1JZAYHJBpE/"
     },
     {
       "date": "2025/11/12",
