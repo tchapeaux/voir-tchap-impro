@@ -246,6 +246,18 @@
       "type": "Croutounz"
     },
     {
+      "date": "2025/11/13",
+      "name": "Match Interunif Dragonflés VS Castors Ardents",
+      "place": "Les Chiroux, Liège",
+      "type": "Arbitrage"
+    },
+    {
+      "date": "2025/11/19",
+      "name": "Match Interunif Loutremers VS Gemblourdes",
+      "place": "IHECS, Bruxelles",
+      "type": "Arbitrage"
+    },
+    {
       "date": "2025/12/03",
       "name": "50 minutes de cuisson",
       "place": "La Fleur en Papier Doré, Bruxelles",
@@ -264,5 +276,6 @@
       "name": "Catch avec les Capitaines de la BIM",
       "place": "Plume persée, Bruxelles",
       "type": "Invitation"
+    }
   ]
 }
