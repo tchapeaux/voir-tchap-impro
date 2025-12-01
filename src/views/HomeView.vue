@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import gsap from 'gsap'
+import { computed, onMounted, ref } from 'vue'
 import dayjs from 'dayjs'
 
 import EventCard from '@/components/EventCard.vue'
@@ -45,6 +46,96 @@ const pastEventsYears = computed(() => {
 function pastEventsByYear(year: string) {
   return pastEvents.value.filter((e) => dayjs(e.date).format('YYYY') === year)
 }
+
+onMounted(() => {
+  // Set initial opacity for elements that will be animated (only future events)
+  const futureYearSeparators = document.querySelectorAll('.events-year-section .year-separator')
+  gsap.set(futureYearSeparators, { opacity: 0 })
+  gsap.set('.next-event-section h2', { opacity: 0 })
+
+  const tl = gsap.timeline({ delay: 1.7 }) // Wait for title animation to complete
+
+  // Animate "Prochainement" header
+  tl.fromTo(
+    '.next-event-section h2',
+    {
+      y: 20,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 0.4,
+      ease: 'power2.out'
+    }
+  )
+
+    // Animate the highlighted event card
+    .fromTo(
+      '.next-event-section .next-event-wrapper',
+      {
+        y: 30,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'back.out(1.2)'
+      },
+      '-=0.2'
+    )
+
+    // Animate year separators (only future events)
+    .fromTo(
+      futureYearSeparators,
+      {
+        x: -20,
+        opacity: 0
+      },
+      {
+        x: 0,
+        opacity: 0.8,
+        duration: 0.4,
+        stagger: 0.15,
+        ease: 'power2.out'
+      },
+      '-=0.1'
+    )
+
+    // Animate event items with stagger
+    .fromTo(
+      '.event-item',
+      {
+        y: 30,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.4,
+        stagger: 0.08,
+        ease: 'power2.out'
+      },
+      '-=0.3'
+    )
+
+    // Animate the "show past" button
+    .fromTo(
+      '.showPast',
+      {
+        y: 20,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.4,
+        ease: 'power2.out'
+      },
+      '-=0.2'
+    )
+})
 </script>
 
 <template>
@@ -64,12 +155,7 @@ function pastEventsByYear(year: string) {
           <div class="line"></div>
         </div>
         <ul class="events-list">
-          <li
-            v-for="(event, eventIdx) in eventsByYear(year)"
-            :key="eventIdx"
-            class="event-item"
-            :style="{ animationDelay: `${eventIdx * 100}ms` }"
-          >
+          <li v-for="(event, eventIdx) in eventsByYear(year)" :key="eventIdx" class="event-item">
             <EventCard :event="event" />
           </li>
         </ul>
@@ -126,6 +212,7 @@ h2 {
 .next-event-wrapper {
   display: flex;
   justify-content: center;
+  opacity: 0; /* Hidden initially for GSAP animation */
 }
 
 .highlighted-card {
@@ -169,16 +256,7 @@ h2 {
 }
 
 .event-item {
-  animation: slideUp 0.5s ease-out forwards;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  opacity: 0; /* Hidden initially for GSAP animation */
 }
 
 .showPast {
@@ -193,6 +271,7 @@ h2 {
   padding: 12px;
   border-radius: 8px;
   transition: all 0.2s;
+  opacity: 0; /* Hidden initially for GSAP animation */
 
   &:hover {
     cursor: pointer;
