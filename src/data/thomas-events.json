@@ -276,6 +276,24 @@
       "name": "Catch avec les Capitaines de la BIM",
       "place": "Plume persée, Bruxelles",
       "type": "Invitation"
+    },
+    {
+      "date": "2026/01/31",
+      "name": "Match Croutounz - CATA",
+      "place": "Lille",
+      "type": "Invitation"
+    },
+   {
+      "date": "2026/02/04",
+      "name": "Raconte-moi tes salades",
+      "place": "Coin Culture ULB - Ixelles",
+      "type": "Croutounz"
+    },
+   {
+      "date": "2026/02/26",
+      "name": "Concept Surprise",
+      "place": "Escale Nord, Anderlecht",
+      "type": "Croutounz"
     }
   ]
 }
