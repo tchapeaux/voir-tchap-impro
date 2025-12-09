@@ -18,8 +18,8 @@ function sortEventByDateDesc(e1: Event, e2: Event) {
 }
 
 const futureEvents = computed(() =>
-  // Substract a small value to keep recent events for a few days and avoid timezone issues
-  EVENTS.items.filter((e) => dayjs(e.date) > dayjs().subtract(1, 'week')).sort(sortEventByDateAsc)
+  // Substract a small value to keep recent events for a while and avoid timezone issues
+  EVENTS.items.filter((e) => dayjs(e.date) > dayjs().subtract(1, 'days')).sort(sortEventByDateAsc)
 )
 
 const nextEvent = computed(() => futureEvents.value[0])
