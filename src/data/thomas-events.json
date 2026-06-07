@@ -306,6 +306,13 @@
       "name": "Match Poussins Masqués",
       "place": "Centre Culturel de Perwez",
       "type": "Championnat"
+    },
+    {
+      "date": "2026/06/20",
+      "name": "Finale FBIA",
+      "place": "CC Auderghem",
+      "type": "Championnat",
+      "url": "https://www.fbia.be/billetterie/fbia-finale-championnat-adulte-2/"
     }
   ]
 }
