@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import HomeView from './views/HomeView.vue'
 import { onMounted, ref } from 'vue'
 import gsap from 'gsap'
 
@@ -46,7 +46,7 @@ onMounted(() => {
   </header>
 
   <main>
-    <RouterView />
+    <HomeView />
   </main>
 
   <footer>

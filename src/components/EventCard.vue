@@ -5,7 +5,6 @@
     :class="[typeClass, { 'is-clickable': hasUrl }]"
     :href="hasUrl ? event.url : undefined"
     :target="hasUrl ? '_blank' : undefined"
-    @click="handleClick"
   >
     <div class="card-header">
       <div class="type">{{ event.type }}</div>
@@ -33,30 +32,23 @@
 import dayjs from 'dayjs'
 import { computed } from 'vue'
 
+import type { Event } from '@/types/events'
+
 import IconPin from './icons/IconPin.vue'
 import IconLink from './icons/IconLink.vue'
 
-const props = defineProps({ event: { type: Object, required: true } })
+const props = defineProps<{ event: Event }>()
 
-const TYPE_CLASSES = {
+const TYPE_CLASSES: Record<string, string> = {
   Championnat: 'type--championnat',
   Croutounz: 'type--croutounz',
   Invitation: 'type--invitation',
   Arbitrage: 'type--arbitrage'
 }
 
-// @ts-ignore
 const typeClass = computed(() => TYPE_CLASSES[props.event.type] || undefined)
 
 const hasUrl = computed(() => !!props.event.url)
-
-function handleClick(e: MouseEvent) {
-  if (!hasUrl.value) {
-    // If it's a div (not clickable), do nothing or maybe show a toast?
-    // For now, we just don't do anything as it's not a link.
-    e.preventDefault()
-  }
-}
 </script>
 
 <style scoped>
@@ -159,11 +151,11 @@ function handleClick(e: MouseEvent) {
   align-items: center;
   gap: 6px;
   opacity: 0.8;
+}
 
-  svg {
-    width: 14px;
-    height: 14px;
-  }
+.place svg {
+  width: 14px;
+  height: 14px;
 }
 
 /* Color Themes */
