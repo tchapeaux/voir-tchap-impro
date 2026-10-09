@@ -313,6 +313,34 @@
       "place": "CC Auderghem",
       "type": "Championnat",
       "url": "https://shop.utick.net/?module=ACTIVITYSERIEDETAILS&pos=FBIA&s=603E5142-8C55-FA60-5CAE-CAA0B195B260"
+    },
+    {
+      "date": "2026/10/06",
+      "name": "50 minutes de cuisson",
+      "place": "La Fleur en Papier Doré, Bruxelles",
+      "type": "Croutounz",
+      "url": "https://www.croutounz.be/spectacles"
+    },
+    {
+      "date": "2026/11/25",
+      "name": "Raconte-moi tes salades",
+      "place": "Coin Culture ULB - Ixelles",
+      "type": "Croutounz",
+      "url": "https://www.croutounz.be/spectacles"
+    },
+    {
+      "date": "2026/12/01",
+      "name": "50 minutes de cuisson",
+      "place": "La Fleur en Papier Doré, Bruxelles",
+      "type": "Croutounz",
+      "url": "https://www.croutounz.be/spectacles"
+    },
+    {
+      "date": "2026/12/04",
+      "name": "Match Croutounz - Blagues Pearls",
+      "place": "Théâtre le Fou Rire, Ixelles",
+      "type": "Championnat",
+      "url": "https://shop.utick.net/?module=ACTIVITYSERIEDETAILS&pos=FBIA&s=1EBFA810-45D5-D522-C96C-2461254BE7FC"
     }
   ]
 }
